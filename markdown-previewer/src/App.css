@@ -1,0 +1,98 @@
+.App {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-width: 450px;
+}
+#markdown-previewer{
+  display: flex;
+  flex-direction: column;
+  margin: 60px;
+  border-radius: 9px;
+  max-width: 90%;
+  box-shadow: 10px 10px 25px;
+}
+#top-bar{
+  display: grid;  
+  background-color: rgb(208, 208, 208);
+  width: 100%;
+  color: rgba(0, 0, 0, 0.498);
+  border-radius: 8px 8px 0 0;
+}
+.title{
+  justify-self: center;
+  margin-top: 5px;
+}
+.btns{ 
+  justify-self: start;
+  margin-top: -20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+}
+.btns button{
+  margin: 3px;
+}
+.btns :nth-child(1){
+  background-color: red;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+}
+.btns :nth-child(2){
+  background-color: rgb(255, 204, 0);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+}
+.btns :nth-child(3){
+  background-color: rgb(0, 173, 0);
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: none;
+}
+#edit{
+  display: flex;
+  flex-direction: row; 
+  width: 100%;
+}
+#editor{
+  background-color: rgba(0, 0, 0, 0.742);
+  color: white;
+  border-radius: 0 0 0 8px ;
+  border: none;
+  width: 50%;
+  padding: 15px;
+}
+#preview{
+  width: 50%;
+  border-radius: 0 0 8px 0 ;
+  background-color: wheat;
+  padding: 10px;
+  overflow: auto;
+}
+#preview img{
+  max-width: fit-content;
+  max-width: -webkit-fill-available;
+}
+
+@media (max-width:800px) {
+    #edit{
+    flex-direction: column;   
+    overflow: hidden;
+     }
+  #editor{    
+      height: 50%;
+      width: 100%;
+      border-radius: 0;
+    }
+  #preview{
+      width: 100%;
+      height: 50%;
+      min-height: 200px;
+      border-radius: 0 0 8px 8px ;
+    }
+}
